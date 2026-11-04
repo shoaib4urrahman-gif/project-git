@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NatureWorld | Explore Nature</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; color: #183b2b; background: #f7faf6; }
+    header {
+      position: absolute; top: 0; left: 0; width: 100%; z-index: 2;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 8%; background: rgba(8, 43, 29, .72); color: white;
+    }
+    .logo { font-family: Georgia, serif; font-size: 27px; font-weight: bold; }
+    .logo span { color: #a6e65b; }
+    nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: bold; }
+    nav a:hover { color: #a6e65b; }
+    .hero {
+      min-height: 590px; display: flex; align-items: center; padding: 130px 8% 70px;
+      color: white;
+      background-image: linear-gradient(90deg, rgba(0,25,16,.78), rgba(0,25,16,.12)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85');
+      background-size: cover; background-position: center;
+    }
+    .hero-content { max-width: 620px; }
+    .hero h1 { font-family: Georgia, serif; font-size: clamp(42px, 6vw, 68px); line-height: 1.08; margin-bottom: 20px; }
+    .hero p { font-size: 19px; line-height: 1.6; margin-bottom: 28px; }
+    .button {
+      display: inline-block; padding: 14px 25px; border-radius: 30px;
+      background: #69b92e; color: white; text-decoration: none; font-weight: bold;
+    }
+    .button:hover { background: #4d9820; }
+    section { padding: 65px 8%; text-align: center; }
+    h2 { font: bold 38px Georgia, serif; margin-bottom: 14px; }
+    .intro { max-width: 700px; margin: 0 auto 35px; line-height: 1.7; color: #52675a; }
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .card { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 5px 18px rgba(0,0,0,.09); }
+    .card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+    .card h3 { padding: 16px; font-size: 19px; }
+    .about { background: #eaf3e7; }
+    .quote { font: italic 25px Georgia, serif; margin-top: 15px; }
+    footer { padding: 25px; text-align: center; color: white; background: #173e2b; }
+    @media (max-width: 800px) {
+      header { padding: 18px 5%; flex-direction: column; gap: 15px; }
+      nav a { margin: 0 8px; font-size: 14px; }
+      .hero { min-height: 620px; padding-left: 7%; }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .gallery { grid-template-columns: 1fr; }
+      .card img { height: 220px; }
+      section { padding: 48px 6%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🍃 Nature<span>World</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="home">
+      <div class="hero-content">
+        <h1>Explore the Beauty of Nature</h1>
+        <p>Discover peaceful landscapes, lush forests, majestic mountains and a greener world.</p>
+        <a class="button" href="#gallery">Explore Gallery →</a>
+      </div>
+    </div>
+
+    <section id="about" class="about">
+      <h2>Welcome to NatureWorld</h2>
+      <p class="intro">Nature is full of wonder. From quiet forests to powerful waterfalls, every place has a story to tell. Take a moment to explore, relax and appreciate the world around us.</p>
+      <p class="quote">“Look deep into nature, and you will understand everything better.”</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Nature Gallery</h2>
+      <p class="intro">A little collection of beautiful places from our wonderful planet.</p>
+      <div class="gallery">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=85" alt="Waterfall flowing through a green forest">
+          <h3>Waterfalls</h3>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=85" alt="Mountain landscape">
+          <h3>Mountains</h3>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=85" alt="Sunlight shining through a forest">
+          <h3>Forests</h3>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=85" alt="Beautiful sunset over a landscape">
+          <h3>Sunsets</h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>NatureWorld · Explore, enjoy and protect nature.</p>
+    <p style="margin-top:8px;">© 2026 NatureWorld. All rights reserved.</p>
+  </footer>
+</body>
+</html>
